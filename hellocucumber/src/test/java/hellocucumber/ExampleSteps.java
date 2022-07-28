@@ -20,7 +20,7 @@ public class ExampleSteps {
     ChromeOptions chromeOptions = new ChromeOptions();
     // e.g. chromeOptions.setCapability("browserVersion", "67");
     // e.g. chromeOptions.setCapability("platformName", "Windows XP");
-    WebDriver driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), chromeOptions);
+    WebDriver driver = new RemoteWebDriver(new URL("http://chrome:4444/wd/hub"), chromeOptions);
 
     public ExampleSteps() throws MalformedURLException {
     }
