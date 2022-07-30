@@ -1,2 +1,4 @@
 hellocucumber/.idea
 hellocucumber/target
+cucumber/hellocucumber/target
+flask/app/__pycache__/main.cpython-38.pyc

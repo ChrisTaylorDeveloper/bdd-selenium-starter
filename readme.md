@@ -1,6 +1,4 @@
 ## Getting started
 
-Watch for test results in Compose output:
-````
-docker-compose up --build
-````
+docker-compose exec cucumber bash
+mvn test

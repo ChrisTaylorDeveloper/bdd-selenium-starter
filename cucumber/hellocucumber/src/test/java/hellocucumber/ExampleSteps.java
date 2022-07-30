@@ -14,6 +14,7 @@ import io.cucumber.java.en.When;
 import java.net.MalformedURLException;
 import java.time.Duration;
 import java.net.URL;
+import org.junit.Assert;
 
 public class ExampleSteps {
 
@@ -25,17 +26,24 @@ public class ExampleSteps {
     public ExampleSteps() throws MalformedURLException {
     }
 
-    @Given("I am on the Google search page")
-    public void I_visit_google() {
-        driver.get("https://www.google.com");
+    @Given("I am on our application Home Page")
+    public void I_visit_homepage() {
+        driver.get("http://flask");
     }
 
-    @When("I search for {string}")
-    public void search_for(String query) {
-        WebElement element = driver.findElement(By.name("q"));
-        element.sendKeys(query);
-        element.submit(); // WebDriver will find form from element.
-   }
+    @When("I press the {string} button")
+    public void press_button(String button_id) {
+        WebElement element = driver.findElement(By.id(button_id));
+        element.click();
+    }
+
+    @Then("I sould see colours list {string}")
+    public void assert_colours_list(String colours_list) {
+        Assert.assertSame(
+            true,
+            driver.findElement(By.id("colours-list")).getText().equalsIgnoreCase(colours_list)
+        );
+    }
 
     @Then("the page title should start with {string}")
     public void checkTitle(String titleStartsWith) {
