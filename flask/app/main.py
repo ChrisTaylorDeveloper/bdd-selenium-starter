@@ -24,7 +24,7 @@ def hello():
     <title>bdd Selenium Start</title>
   </head>
   <body>
-    <h1>Home Page</h1>
+    <h1>bdd Selenium Start home page</h1>
     <p>This is the home page of our application.</p>
     <p>If you click the "Show" button, I will list some colours.</p>
     <button id="show">Show</button>
