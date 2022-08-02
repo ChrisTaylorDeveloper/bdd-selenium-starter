@@ -34,7 +34,7 @@ public class ExampleSteps {
 
     @Then("I sould see colours list {string}")
     public void assert_colours_list(String colours_list) {
-        Assert.assertTrue(this.homePage.getColoursList().equals(colours_list));
+        Assert.assertEquals(colours_list, this.homePage.getColoursList());
     }
 
     @After()
