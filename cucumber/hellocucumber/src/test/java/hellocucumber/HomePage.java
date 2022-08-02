@@ -1,5 +1,7 @@
 package hellocucumber;
 
+import java.util.List;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import java.time.Duration;
@@ -35,7 +37,9 @@ public class HomePage {
     }
 
     public String getHeaderMessage() {
-        return driver.findElement(headerBy).getText();
+        List<WebElement> headers = driver.findElements(headerBy);
+        Assert.assertEquals("Headers", 1, headers.size());
+        return headers.get(0).getText();
     }
 
     public String getColoursList() {
