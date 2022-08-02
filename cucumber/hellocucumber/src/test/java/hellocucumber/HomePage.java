@@ -9,12 +9,12 @@ import org.openqa.selenium.WebElement;
 
 public class HomePage {
 
-    protected WebDriver driver;
+    protected final WebDriver driver;
 
-    private String titleStart = "bdd";
-    private By headerBy = By.tagName("h1");
-    private By showButtonBy = By.id("show");
-    private By colourListBy = By.id("colours-list");
+    private final String titleStart = "bdd";
+    private final By headerBy = By.tagName("h1");
+    private final By showButtonBy = By.id("show");
+    private final By colourListBy = By.id("colours-list");
 
     public HomePage(WebDriver driver){
 
