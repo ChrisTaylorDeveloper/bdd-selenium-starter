@@ -1,0 +1,8 @@
+services:
+  chrome:
+    ports:
+      - 4444:4444
+      - 5900:5900
+  flask:
+    ports:
+      - "8001:80"
