@@ -3,6 +3,7 @@ services:
     build: ./cucumber
     volumes:
       - ./cucumber/hellocucumber:/usr/src/workdir
+      - ./maven-repository:/root/.m2
   chrome:
     image: selenium/standalone-chrome-debug:3.141.59-20210929
   flask:
