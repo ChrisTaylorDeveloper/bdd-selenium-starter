@@ -18,8 +18,7 @@ public class HomePage {
     private final By showButtonBy = By.id("show");
     private final By colourListBy = By.id("colours-list");
 
-    public HomePage(WebDriver driver){
-
+    public HomePage(WebDriver driver) {
         this.driver = driver;
         Duration fiveSecs = Duration.ofSeconds(5);
 
