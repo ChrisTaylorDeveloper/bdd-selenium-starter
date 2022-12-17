@@ -22,19 +22,19 @@ public class ExampleSteps {
     public ExampleSteps() throws MalformedURLException {}
 
     @Given("I am on our application Home Page")
-    public void i_visit_homepage() {
+    public void iVisitHomepage() {
         driver.get("http://flask");
         this.homePage = new HomePage(driver);
     }
 
     @When("I press the {string} button")
-    public void press_button(String button_id) {
+    public void pressButton(String buttonId) {
         this.homePage.getShowButton().click();
     }
 
     @Then("I sould see colours list {string}")
-    public void assert_colours_list(String colours_list) {
-        Assert.assertEquals(colours_list, this.homePage.getColoursList());
+    public void assertColoursList(String coloursList) {
+        Assert.assertEquals(coloursList, this.homePage.getColoursList());
     }
 
     @After()
