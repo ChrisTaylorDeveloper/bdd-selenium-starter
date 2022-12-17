@@ -17,6 +17,11 @@ public class HomePage {
     /**
      * Put javadoc here.
      */
+    static final int FIVE_SECONDS = 5;
+
+    /**
+     * Put javadoc here.
+     */
     protected final WebDriver driver;
 
     /**
@@ -45,7 +50,7 @@ public class HomePage {
      */
     public HomePage(final WebDriver driver) {
         this.driver = driver;
-        Duration fiveSecs = Duration.ofSeconds(5);
+        Duration fiveSecs = Duration.ofSeconds(FIVE_SECONDS);
 
         new WebDriverWait(driver, fiveSecs).until(
             new ExpectedCondition<Boolean>() {
