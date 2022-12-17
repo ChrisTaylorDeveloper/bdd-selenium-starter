@@ -22,7 +22,7 @@ public class HomePage {
     /**
      * Put javadoc here.
      */
-    protected final WebDriver driver;
+    private final WebDriver driver;
 
     /**
      * Put javadoc here.
