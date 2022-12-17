@@ -12,31 +12,54 @@ import java.net.MalformedURLException;
 import org.junit.Assert;
 
 public class ExampleSteps {
-    
+
+    /**
+     * Put javadoc here.
+     */
     private HomePage homePage;
 
+    /**
+     * Put javadoc here.
+     */
     private WebDriver driver = new RemoteWebDriver(
         new URL("http://chrome:4444/wd/hub"), new ChromeOptions()
     );
 
-    public ExampleSteps() throws MalformedURLException {}
+    /**
+     * Put javadoc here.
+     */
+    public ExampleSteps() throws MalformedURLException { }
 
+    /**
+     * Put javadoc here.
+     */
     @Given("I am on our application Home Page")
-    public void i_visit_homepage() {
+    public void iVisitHomepage() {
         driver.get("http://flask");
         this.homePage = new HomePage(driver);
     }
 
+    /**
+     * Put javadoc here.
+     * @param buttonId
+     */
     @When("I press the {string} button")
-    public void press_button(String button_id) {
+    public void pressButton(final String buttonId) {
         this.homePage.getShowButton().click();
     }
 
+    /**
+     * Put javadoc here.
+     * @param coloursList
+     */
     @Then("I sould see colours list {string}")
-    public void assert_colours_list(String colours_list) {
-        Assert.assertEquals(colours_list, this.homePage.getColoursList());
+    public void assertColoursList(final String coloursList) {
+        Assert.assertEquals(coloursList, this.homePage.getColoursList());
     }
 
+    /**
+     * Put javadoc here.
+     */
     @After()
     public void closeBrowser() {
         driver.quit();
