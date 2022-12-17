@@ -46,13 +46,13 @@ public class HomePage {
 
     /**
      * Put javadoc here.
-     * @param driver
+     * @param d
      */
-    public HomePage(final WebDriver driver) {
-        this.driver = driver;
+    public HomePage(final WebDriver d) {
+        this.driver = d;
         Duration fiveSecs = Duration.ofSeconds(FIVE_SECONDS);
 
-        new WebDriverWait(driver, fiveSecs).until(
+        new WebDriverWait(d, fiveSecs).until(
             new ExpectedCondition<Boolean>() {
                 public Boolean apply(final WebDriver d) {
                     return d.getTitle().toLowerCase().startsWith(titleStart);
