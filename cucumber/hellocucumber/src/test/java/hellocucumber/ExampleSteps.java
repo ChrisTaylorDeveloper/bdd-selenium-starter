@@ -44,7 +44,7 @@ public class ExampleSteps {
      * @param buttonId
      */
     @When("I press the {string} button")
-    public void pressButton(String buttonId) {
+    public void pressButton(final String buttonId) {
         this.homePage.getShowButton().click();
     }
 
@@ -53,7 +53,7 @@ public class ExampleSteps {
      * @param coloursList
      */
     @Then("I sould see colours list {string}")
-    public void assertColoursList(String coloursList) {
+    public void assertColoursList(final String coloursList) {
         Assert.assertEquals(coloursList, this.homePage.getColoursList());
     }
 
