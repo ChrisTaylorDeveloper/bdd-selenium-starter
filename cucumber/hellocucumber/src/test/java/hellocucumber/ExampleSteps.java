@@ -12,14 +12,14 @@ import java.net.MalformedURLException;
 import org.junit.Assert;
 
 public class ExampleSteps {
-    
+
     private HomePage homePage;
 
     private WebDriver driver = new RemoteWebDriver(
         new URL("http://chrome:4444/wd/hub"), new ChromeOptions()
     );
 
-    public ExampleSteps() throws MalformedURLException {}
+    public ExampleSteps() throws MalformedURLException { }
 
     @Given("I am on our application Home Page")
     public void iVisitHomepage() {
