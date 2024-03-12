@@ -11,5 +11,7 @@ $ docker compose down --rmi local
 ## Running the tests
 ````
 $ docker compose exec cucumber bash
+$ mvn validate
+$ mvn compile
 $ mvn test
 ````
