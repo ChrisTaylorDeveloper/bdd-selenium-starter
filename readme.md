@@ -4,14 +4,14 @@ A starter project if you need Behavior-driven Development with Cucumber, Seleniu
 
 ## Starting and stopping the containers
 ````
-$ docker compose up -d --build
-$ docker compose down --rmi local
+docker compose up -d --build
+docker compose down --rmi local
 ````
 
 ## Running the tests
 ````
-$ docker compose exec cucumber bash
-$ mvn validate
-$ mvn compile
-$ mvn test
+docker compose exec cucumber bash
+mvn validate
+mvn compile
+mvn test
 ````
