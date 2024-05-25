@@ -1,5 +1,5 @@
 /** */
-package hellocucumber;
+package ctd.pages;
 
 import java.util.List;
 import org.junit.Assert;

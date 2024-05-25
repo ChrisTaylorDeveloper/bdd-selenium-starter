@@ -1,4 +1,4 @@
-package ctd;
+package ctd.stepDefinition;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -7,13 +7,19 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
+import java.net.MalformedURLException;
 import java.net.URL;
 import org.junit.Assert;
+import ctd.pages.HomePage;
 
 public class StepDefinitions {
 
     /** */
     private HomePage homePage;
+
+    /** */
+    public StepDefinitions() throws MalformedURLException { }
 
     /** */
     private WebDriver driver = new RemoteWebDriver(
