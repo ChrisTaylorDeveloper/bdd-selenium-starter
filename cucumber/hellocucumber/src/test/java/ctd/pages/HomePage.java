@@ -30,9 +30,7 @@ public class HomePage {
     /** */
     private final By colourListBy = By.id("colours-list");
 
-    /**
-     * @param d
-     */
+    /** @param d */
     public HomePage(final WebDriver d) {
         this.driver = d;
         Duration fiveSecs = Duration.ofSeconds(FIVE_SECONDS);
@@ -46,25 +44,19 @@ public class HomePage {
         );
     }
 
-    /**
-     * @return tbc
-     */
+    /** @return tbc */
     public WebElement getShowButton() {
         return driver.findElement(showButtonBy);
     }
 
-    /**
-     * @return tbc
-     */
+    /** @return tbc */
     public String getHeaderMessage() {
         List<WebElement> headers = driver.findElements(headerBy);
         Assert.assertEquals("Headers", 1, headers.size());
         return headers.get(0).getText();
     }
 
-    /**
-     * @return tbc
-     */
+    /** @return tbc */
     public String getColoursList() {
         return driver.findElement(colourListBy).getText();
     }
