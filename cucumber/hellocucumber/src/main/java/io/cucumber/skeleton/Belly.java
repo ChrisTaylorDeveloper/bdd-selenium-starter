@@ -1,7 +1,9 @@
 package io.cucumber.skeleton;
 
 public class Belly {
-    public void eat(int cukes) {
+
+    /** @param cukes */
+    public void eat(final int cukes) {
 
     }
 }
