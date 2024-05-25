@@ -1,4 +1,4 @@
-package hellocucumber;
+package ctd.stepDefinition;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -7,59 +7,45 @@ import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import java.net.URL;
+
 import java.net.MalformedURLException;
+import java.net.URL;
 import org.junit.Assert;
+import ctd.pages.HomePage;
 
-public class ExampleSteps {
+public class StepDefinitions {
 
-    /**
-     * Put javadoc here.
-     */
+    /** */
     private HomePage homePage;
 
-    /**
-     * Put javadoc here.
-     */
+    /** */
+    public StepDefinitions() throws MalformedURLException { }
+
+    /** */
     private WebDriver driver = new RemoteWebDriver(
         new URL("http://chrome:4444/wd/hub"), new ChromeOptions()
     );
 
-    /**
-     * Put javadoc here.
-     */
-    public ExampleSteps() throws MalformedURLException { }
-
-    /**
-     * Put javadoc here.
-     */
+    /** */
     @Given("I am on our application Home Page")
     public void iVisitHomepage() {
         driver.get("http://flask");
         this.homePage = new HomePage(driver);
     }
 
-    /**
-     * Put javadoc here.
-     * @param buttonId
-     */
+    /** @param buttonId */
     @When("I press the {string} button")
     public void pressButton(final String buttonId) {
         this.homePage.getShowButton().click();
     }
 
-    /**
-     * Put javadoc here.
-     * @param coloursList
-     */
+    /** @param coloursList */
     @Then("I sould see colours list {string}")
     public void assertColoursList(final String coloursList) {
         Assert.assertEquals(coloursList, this.homePage.getColoursList());
     }
 
-    /**
-     * Put javadoc here.
-     */
+    /** */
     @After()
     public void closeBrowser() {
         driver.quit();

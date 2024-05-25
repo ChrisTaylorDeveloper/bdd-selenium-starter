@@ -3,13 +3,18 @@ services:
     build: ./cucumber
     volumes:
       - ./cucumber/hellocucumber:/usr/src/workdir
-      - ./maven-repository:/root/.m2
+      - ./cucumber/hellocucumber/maven-repository:/root/.m2
   chrome:
     image: selenium/standalone-chrome-debug:3.141.59-20210929
+    ports:
+      - 4444:4444
+      - 5900:5900
   flask:
     build: ./flask
     volumes:
       - ./flask/app:/app
+    ports:
+      - "8001:80"
     environment:
       - FLASK_APP=main.py
       - FLASK_DEBUG=1
