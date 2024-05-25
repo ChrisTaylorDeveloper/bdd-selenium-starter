@@ -10,4 +10,18 @@ public class StepDefinitions {
         Belly belly = new Belly();
         belly.eat(cukes);
     }
+
+    /** @param int1 */
+    @Given("I have {int} cukes on my arm")
+    public void iHaveCukesOnMyArm(final Integer int1) {
+        Belly belly = new Belly();
+        belly.eat(int1);
+    }
+
+    /** @param int1 */
+    @Given("I have {int} cukes 0n my leg")
+    public void iHaveCukesOnMyLeg(final Integer int1) {
+        Belly belly = new Belly();
+        belly.eat(int1);
+    }
 }
