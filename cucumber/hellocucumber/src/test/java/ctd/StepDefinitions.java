@@ -1,4 +1,4 @@
-package io.cucumber.skeleton;
+package ctd;
 
 import io.cucumber.java.en.Given;
 

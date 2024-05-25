@@ -1,4 +1,4 @@
-package io.cucumber.skeleton;
+package ctd;
 
 public class Belly {
 
