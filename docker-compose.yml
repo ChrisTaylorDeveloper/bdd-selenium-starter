@@ -10,7 +10,7 @@ services:
       - 4444:4444
       - 5900:5900
   flask:
-    build: ./flask
+    image: tiangolo/uwsgi-nginx-flask:python3.8
     volumes:
       - ./flask/app:/app
     ports:
@@ -18,4 +18,5 @@ services:
     environment:
       - FLASK_APP=main.py
       - FLASK_DEBUG=1
+      - PYTHONPYCACHEPREFIX=/tmp/pycache
     command: flask run --host=0.0.0.0 --port=80
