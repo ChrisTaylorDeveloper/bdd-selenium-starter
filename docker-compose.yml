@@ -1,9 +1,12 @@
 services:
   cucumber:
-    build: ./cucumber
+    image: maven:3.8.6-jdk-11
+    working_dir: /usr/src/workdir
+    init: true
+    command: [ "tail", "-f", "/dev/null" ]
     volumes:
       - ./cucumber/hellocucumber:/usr/src/workdir
-      - ./cucumber/hellocucumber/maven-repository:/root/.m2
+      - ./cucumber/maven-repository:/root/.m2
   chrome:
     image: selenium/standalone-chrome-debug:3.141.59-20210929
     ports:
