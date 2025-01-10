@@ -6,8 +6,8 @@ The `flask` service uses `flask run` to start a simple development webserver.  T
 
 ## Starting and stopping the containers
 ````
-docker compose up -d --build
-docker compose down --rmi local
+docker compose up -d
+docker compose down
 ````
 
 ## Running the tests
