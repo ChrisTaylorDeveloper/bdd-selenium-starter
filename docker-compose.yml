@@ -1,21 +1,21 @@
 services:
-  cucumber:
+  bdd-test:
     image: maven:3.8.6-jdk-11
     working_dir: /usr/src/workdir
     init: true
     command: [ "tail", "-f", "/dev/null" ]
     volumes:
-      - ./cucumber/hellocucumber:/usr/src/workdir
-      - ./cucumber/maven-repository:/root/.m2
-  chrome:
+      - ./bdd-test/hellocucumber:/usr/src/workdir
+      - ./bdd-test/maven-repository:/root/.m2
+  robot-browser:
     image: selenium/standalone-chrome:98.0-20250303
     ports:
       - 4444:4444
       - 7900:7900
-  flask:
+  web-app:
     image: tiangolo/uwsgi-nginx-flask:python3.8
     volumes:
-      - ./flask/app:/app
+      - ./web-app/app:/app
     ports:
       - "8001:80"
     environment:
