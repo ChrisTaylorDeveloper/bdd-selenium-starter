@@ -8,10 +8,10 @@ services:
       - ./cucumber/hellocucumber:/usr/src/workdir
       - ./cucumber/maven-repository:/root/.m2
   chrome:
-    image: selenium/standalone-chrome-debug:3.141.59-20210929
+    image: selenium/standalone-chrome:98.0-20250303
     ports:
       - 4444:4444
-      - 5900:5900
+      - 7900:7900
   flask:
     image: tiangolo/uwsgi-nginx-flask:python3.8
     volumes:
