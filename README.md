@@ -12,7 +12,7 @@ docker compose down
 
 ## Running the tests
 ````
-docker compose exec cucumber bash
+docker compose exec bdd-test bash
 mvn validate
 mvn compile
 mvn test
