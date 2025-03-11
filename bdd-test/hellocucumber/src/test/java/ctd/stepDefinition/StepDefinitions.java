@@ -23,13 +23,13 @@ public class StepDefinitions {
 
     /** */
     private WebDriver driver = new RemoteWebDriver(
-        new URL("http://chrome:4444/wd/hub"), new ChromeOptions()
+        new URL("http://robot-browser:4444/wd/hub"), new ChromeOptions()
     );
 
     /** */
     @Given("I am on our application Home Page")
     public void iVisitHomepage() {
-        driver.get("http://flask");
+        driver.get("http://web-app");
         this.homePage = new HomePage(driver);
     }
 
